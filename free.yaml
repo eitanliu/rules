@@ -14,7 +14,7 @@ proxy-providers:
   #     enable: true
   #     lazy: true
   #     interval: 2000
-  #     url: http://www.gstatic.com/generate_204
+  #     url: https://www.google.com/generate_204
   free-nodefree:
     type: http
     path: free/nodefree.yaml
@@ -24,7 +24,7 @@ proxy-providers:
       enable: true
       lazy: true
       interval: 2000
-      url: http://www.gstatic.com/generate_204
+      url: https://www.google.com/generate_204
   # free-clashnode:
   #   type: http
   #   path: free/clashnode.yaml
@@ -34,7 +34,7 @@ proxy-providers:
   #     enable: true
   #     lazy: true
   #     interval: 2000
-  #     url: http://www.gstatic.com/generate_204
+  #     url: https://www.google.com/generate_204
   free-nicevpn:
     type: http
     path: free/nicevpn.yaml
@@ -45,7 +45,7 @@ proxy-providers:
       enable: true
       lazy: true
       interval: 2000
-      url: http://www.gstatic.com/generate_204
+      url: https://www.google.com/generate_204
   free-mfuu:
     type: http
     path: free/mfuu.yaml
@@ -55,30 +55,30 @@ proxy-providers:
       enable: true
       lazy: true
       interval: 2000
-      url: http://www.gstatic.com/generate_204
+      url: https://www.google.com/generate_204
 proxy-groups:
-  - name: 🌐 节点选择
+  - name: 🌐节点选择
     type: select
     proxies:
-      - 💡 自动选择
-      - ✋ 手动选择
-      - 🪜 故障转移
-      - ☁️ 全局直连
-      # - 🔗 WilliamStar007
-      - 🔗 NodeFree
-      # - 🔗 ClashNode
-      - 🔗 NiceVPN
-      - 🔗 Mfuu
-      # - 🔗 Anaer
-      # - 🔗 Pojiezhiyuanjun
-      # - 🔗 Oslook
-      # - 🔗 Ermaozi
-      # - 🔗 Learnhard-cn
-      # - 🔗 Tbbatbb
-      # - 🔗 Vveg26
-      # - 🔗 OpenRunner
-      # - 🔗 Xrayfree
-  - name: ✋ 手动选择
+      - 💡自动选择
+      - ✋手动选择
+      - 🪜故障转移
+      - ☁️全局直连
+      # - 🔗WilliamStar007
+      - 🔗NodeFree
+      # - 🔗ClashNode
+      - 🔗NiceVPN
+      - 🔗Mfuu
+      # - 🔗Anaer
+      # - 🔗Pojiezhiyuanjun
+      # - 🔗Oslook
+      # - 🔗Ermaozi
+      # - 🔗Learnhard-cn
+      # - 🔗Tbbatbb
+      # - 🔗Vveg26
+      # - 🔗OpenRunner
+      # - 🔗Xrayfree
+  - name: ✋手动选择
     type: select
     use: 
       # - free-WilliamStar007
@@ -86,7 +86,7 @@ proxy-groups:
       # - free-clashnode
       - free-nicevpn
       - free-mfuu
-  - name: 💡 自动选择
+  - name: 💡自动选择
     type: url-test
     url: https://www.google.com/generate_204
     interval: 300
@@ -97,7 +97,7 @@ proxy-groups:
       # - free-clashnode
       - free-nicevpn
       - free-mfuu
-  - name: 🪜 故障转移
+  - name: 🪜故障转移
     type: fallback
     url: https://www.google.com/generate_204
     interval: 300
@@ -108,72 +108,72 @@ proxy-groups:
       # - free-clashnode
       - free-nicevpn
       - free-mfuu
-  # - name: 🔗 WilliamStar007
+  # - name: 🔗WilliamStar007
   #   type: url-test
   #   url: https://www.google.com/generate_204
   #   interval: 300
   #   tolerance: 100
   #   use: 
   #     - free-WilliamStar007
-  - name: 🔗 NodeFree
+  - name: 🔗NodeFree
     type: url-test
     url: https://www.google.com/generate_204
     interval: 300
     tolerance: 100
     use: 
       - free-nodefree
-  # - name: 🔗 ClashNode
+  # - name: 🔗ClashNode
   #   type: url-test
   #   url: https://www.google.com/generate_204
   #   interval: 300
   #   tolerance: 100
   #   use: 
   #     - free-clashnode
-  - name: 🔗 NiceVPN
+  - name: 🔗NiceVPN
     type: url-test
     url: https://www.google.com/generate_204
     interval: 300
     tolerance: 100
     use: 
       - free-nicevpn
-  - name: 🔗 Mfuu
+  - name: 🔗Mfuu
     type: url-test
     url: https://www.google.com/generate_204
     interval: 300
     tolerance: 100
     use: 
       - free-mfuu
-  - name: 👉 国内网站
+  - name: 👉国内网站
     type: select
     proxies:
-      - ☁️ 全局直连
-      - 🌐 节点选择
-      - 💡 自动选择
-      - 🪜 故障转移
-  - name: 👉 国外网站
+      - ☁️全局直连
+      - 🌐节点选择
+      - 💡自动选择
+      - 🪜故障转移
+  - name: 👉国外网站
     type: select
     proxies:
-      - 🌐 节点选择
-      - 💡 自动选择
-      - 🪜 故障转移
-      - ☁️ 全局直连
-  - name: 👉 例外网站
+      - 🌐节点选择
+      - 💡自动选择
+      - 🪜故障转移
+      - ☁️全局直连
+  - name: 👉例外网站
     type: select
     proxies:
-      - ☁️ 全局直连
-      - 🌐 节点选择
-      - 💡 自动选择
-      - 🪜 故障转移
-  - name: ☁️ 全局直连
+      - ☁️全局直连
+      - 🌐节点选择
+      - 💡自动选择
+      - 🪜故障转移
+  - name: ☁️全局直连
     type: select
     proxies:
       - DIRECT
-  - name: 🛡 全局拦截
+  - name: 🛡全局拦截
     type: select
     proxies:
       - REJECT
       - DIRECT
-  - name: 🍃 应用净化
+  - name: 🍃净化拦截
     type: select
     proxies:
       - REJECT
@@ -231,7 +231,8 @@ dns:
     - "*.*.xboxlive.com"
     - speedtest.cros.wr.pvp.net
   default-nameserver:
-    - 114.114.114.114
+    - 119.29.29.29
+    - 223.5.5.5
     - 9.9.9.9
   nameserver:
     - 1.2.4.8
@@ -243,8 +244,6 @@ dns:
     - 180.76.76.76
     - 119.28.28.28
     - 119.29.29.29
-    - 114.114.114.114
-    - 114.114.115.115
     - 101.226.4.6
     - 218.30.118.6
     - 123.125.81.6
@@ -392,5 +391,6 @@ cfw-bypass:
   - 192.168.*
   - <local>
 rules:
- - GEOIP,CN,👉 国内网站
- - MATCH,👉 例外网站
+  - GEOIP,LAN,☁️全局直连
+  - GEOIP,CN,👉国内网站
+  - MATCH,👉例外网站
