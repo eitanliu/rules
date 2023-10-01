@@ -66,6 +66,7 @@ proxy-groups:
       - ☁️直连方式
       - 🇺🇸美国手动
       - 🇺🇸美国自动
+      - 🇨🇳中国手动
       - 🇭🇰香港手动
       - 🇭🇰香港自动
       - 🇹🇼台湾手动
@@ -90,8 +91,8 @@ proxy-groups:
       # - 🔗Xrayfree
   - name: ✋手动选择
     type: select
-    filter: '^((?!(CN|中国)).)*$'
-    use: 
+    filter: "^((?!(CN|中国)).)*$"
+    use:
       # - free-WilliamStar007
       - free-nodefree
       # - free-clashnode
@@ -102,8 +103,8 @@ proxy-groups:
     url: https://www.google.com/generate_204
     interval: 300
     tolerance: 50
-    filter: '^((?!(CN|中国|RU|MU|ZA)).)*$'
-    use: 
+    filter: "^((?!(CN|中国|RU|MU|ZA)).)*$"
+    use:
       # - free-WilliamStar007
       - free-nodefree
       # - free-clashnode
@@ -114,8 +115,8 @@ proxy-groups:
     url: https://www.google.com/generate_204
     interval: 300
     tolerance: 50
-    filter: '^((?!(CN|中国|RU|MU|ZA)).)*$'
-    use: 
+    filter: "^((?!(CN|中国|RU|MU|ZA)).)*$"
+    use:
       # - free-WilliamStar007
       - free-nodefree
       # - free-clashnode
@@ -126,46 +127,46 @@ proxy-groups:
   #   url: https://www.google.com/generate_204
   #   interval: 300
   #   tolerance: 100
-  #   use: 
+  #   use:
   #     - free-WilliamStar007
   - name: 🔗NodeFree
     type: url-test
     url: https://www.google.com/generate_204
     interval: 300
     tolerance: 100
-    filter: '^((?!(CN|中国)).)*$'
-    use: 
+    filter: "^((?!(CN|中国)).)*$"
+    use:
       - free-nodefree
   # - name: 🔗ClashNode
   #   type: url-test
   #   url: https://www.google.com/generate_204
   #   interval: 300
   #   tolerance: 100
-  #   use: 
+  #   use:
   #     - free-clashnode
   - name: 🔗NiceVPN
     type: url-test
     url: https://www.google.com/generate_204
     interval: 300
     tolerance: 100
-    filter: '^((?!(CN|中国)).)*$'
-    use: 
+    filter: "^((?!(CN|中国)).)*$"
+    use:
       - free-nicevpn
   - name: 🔗Mfuu
     type: url-test
     url: https://www.google.com/generate_204
     interval: 300
     tolerance: 100
-    filter: '^((?!(CN|中国)).)*$'
-    use: 
+    filter: "^((?!(CN|中国)).)*$"
+    use:
       - free-mfuu
   - name: 🇺🇸美国手动
     type: select
     url: https://www.google.com/generate_204
     interval: 300
     tolerance: 100
-    filter: 'US|美国'
-    use: 
+    filter: "US|美国"
+    use:
       - free-nodefree
       - free-nicevpn
       - free-mfuu
@@ -174,48 +175,58 @@ proxy-groups:
     url: https://www.google.com/generate_204
     interval: 300
     tolerance: 100
-    filter: 'US|美国'
-    use: 
+    filter: "US|美国"
+    use:
       - free-nodefree
       - free-nicevpn
       - free-mfuu
-  - name:  🇭🇰香港手动
+  - name: 🇨🇳中国手动
     type: select
-    url: http://cp.cloudflare.com/generate_204
+    url: https://www.google.com/generate_204
     interval: 300
     tolerance: 100
-    filter: 'HK|香港'
-    use: 
+    filter: "CN|中国"
+    use:
       - free-nodefree
       - free-nicevpn
       - free-mfuu
-  - name:  🇭🇰香港自动
-    type: url-test
-    url: http://cp.cloudflare.com/generate_204
+  - name: 🇭🇰香港手动
+    type: select
+    url: https://www.google.com/generate_204
     interval: 300
     tolerance: 100
-    filter: 'HK|香港'
-    use: 
+    filter: "HK|香港"
+    use:
+      - free-nodefree
+      - free-nicevpn
+      - free-mfuu
+  - name: 🇭🇰香港自动
+    type: url-test
+    url: https://www.google.com/generate_204
+    interval: 300
+    tolerance: 100
+    filter: "HK|香港"
+    use:
       - free-nodefree
       - free-nicevpn
       - free-mfuu
   - name: 🇹🇼台湾手动
     type: select
-    url: http://cp.cloudflare.com/generate_204
+    url: https://www.google.com/generate_204
     interval: 300
     tolerance: 100
-    filter: 'TW|台湾'
-    use: 
+    filter: "TW|台湾"
+    use:
       - free-nodefree
       - free-nicevpn
       - free-mfuu
   - name: 🇹🇼台湾自动
     type: url-test
-    url: http://cp.cloudflare.com/generate_204
+    url: https://www.google.com/generate_204
     interval: 300
     tolerance: 100
-    filter: 'TW|台湾'
-    use: 
+    filter: "TW|台湾"
+    use:
       - free-nodefree
       - free-nicevpn
       - free-mfuu
@@ -224,8 +235,8 @@ proxy-groups:
     url: https://www.google.com/generate_204
     interval: 300
     tolerance: 100
-    filter: 'JP|日本'
-    use: 
+    filter: "JP|日本"
+    use:
       - free-nodefree
       - free-nicevpn
       - free-mfuu
@@ -234,8 +245,8 @@ proxy-groups:
     url: https://www.google.com/generate_204
     interval: 300
     tolerance: 100
-    filter: 'JP|日本'
-    use: 
+    filter: "JP|日本"
+    use:
       - free-nodefree
       - free-nicevpn
       - free-mfuu
@@ -244,8 +255,8 @@ proxy-groups:
     url: https://www.google.com/generate_204
     interval: 300
     tolerance: 100
-    filter: 'KR|韩国'
-    use: 
+    filter: "KR|韩国"
+    use:
       - free-nodefree
       - free-nicevpn
       - free-mfuu
@@ -254,8 +265,8 @@ proxy-groups:
     url: https://www.google.com/generate_204
     interval: 300
     tolerance: 100
-    filter: 'KR|韩国'
-    use: 
+    filter: "KR|韩国"
+    use:
       - free-nodefree
       - free-nicevpn
       - free-mfuu
@@ -349,21 +360,8 @@ dns:
     - 210.2.4.8
     - 223.5.5.5
     - 223.6.6.6
-    - 52.80.52.52
-    - 117.50.10.10
-    - 180.76.76.76
     - 119.28.28.28
     - 119.29.29.29
-    - 101.226.4.6
-    - 218.30.118.6
-    - 123.125.81.6
-    - 140.207.198.6
-    - 202.38.64.1
-    - 202.112.20.131
-    - 202.141.160.95
-    - 202.141.160.99
-    - 202.141.176.95
-    - 202.141.176.99
     - tls://dot.pub:853
     - tls://1.12.12.12:853
     - tls://120.53.53.53:853
@@ -381,57 +379,6 @@ dns:
     - 8.8.8.8
     - 1.0.0.1
     - 1.1.1.1
-    - 208.67.220.220
-    - 208.67.220.222
-    - 208.67.222.220
-    - 208.67.222.222
-    - 195.46.39.39
-    - 195.46.39.40
-    - 168.95.1.1
-    - 203.80.96.10
-    - 168.95.192.1
-    - 164.124.101.2
-    - 164.124.107.9
-    - 203.248.252.2
-    - 203.248.242.2
-    - 80.80.80.80
-    - 80.80.81.81
-    - 199.85.126.10
-    - 199.85.127.10
-    - 168.126.63.1
-    - 168.126.63.2
-    - 139.175.252.16
-    - 139.175.55.244
-    - 202.45.84.58
-    - 202.45.84.59
-    - 8.26.56.26
-    - 23.253.163.53
-    - 77.88.8.1
-    - 77.88.8.8
-    - 89.233.43.71
-    - 91.239.100.100
-    - 198.101.242.72
-    - 8.20.247.20
-    - 64.6.64.6
-    - 64.6.65.6
-    - 209.244.0.3
-    - 209.244.0.4
-    - 210.220.163.82
-    - 219.250.36.130
-    - 202.14.67.4
-    - 84.200.69.80
-    - 84.200.70.40
-    - 202.14.67.14
-    - 156.154.70.1
-    - 156.154.71.1
-    - 216.146.35.35
-    - 216.146.36.36
-    - 77.109.148.136
-    - 77.109.148.137
-    - 101.101.101.101
-    - 101.102.103.104
-    - 74.82.42.42
-    - 66.220.18.42
     - https://dns.quad9.net/dns-query
     - https://dns9.quad9.net/dns-query
     - tls://dns.google:853
@@ -452,15 +399,6 @@ dns:
     - tls://b.iqiq.io:853
     - tls://h.iqiq.io:853
     - tls://j.iqiq.io:853
-    - tls://c.passcloud.xyz:853
-    - tls://x.passcloud.xyz:853
-    - https://a.passcloud.xyz/hk
-    - https://a.passcloud.xyz/am
-    - https://a.passcloud.xyz/us
-    - https://a.passcloud.xyz/sz
-    - https://a.passcloud.xyz/cdn
-    - https://a.passcloud.xyz/dns-query
-    - https://worldwide.passcloud.xyz/dns-query
   fallback-filter:
     geoip: true
     geoip-code: CN
