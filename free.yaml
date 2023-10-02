@@ -302,6 +302,8 @@ proxy-groups:
 dns:
   enable: true
   ipv6: false
+  # listen: 0.0.0.0:53
+  # enhanced-mode: redir-host
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
   fake-ip-filter:
@@ -356,7 +358,6 @@ dns:
     - 223.5.5.5
     - 9.9.9.9
   nameserver:
-    - 1.2.4.8
     - 210.2.4.8
     - 223.5.5.5
     - 223.6.6.6
@@ -399,6 +400,8 @@ dns:
     - tls://b.iqiq.io:853
     - tls://h.iqiq.io:853
     - tls://j.iqiq.io:853
+    - https://a.passcloud.xyz/dns-query
+    - https://worldwide.passcloud.xyz/dns-query
   fallback-filter:
     geoip: true
     geoip-code: CN
@@ -416,6 +419,8 @@ dns:
       - +.googleapis.cn
       - +.googleapis.com
       - +.gvt1.com
+  nameserver-policy:
+    +.jsdelivr.net: 223.5.5.5
 cfw-bypass:
   - localhost
   - 127.*
